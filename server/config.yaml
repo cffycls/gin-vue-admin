@@ -135,18 +135,18 @@ sqlite:
   log-mode: ""
   log-zap: false
 db-list:
-  - disable: true # 是否禁用
-    type: "" # 数据库的类型,目前支持mysql、pgsql、mssql、oracle
-    alias-name: "" # 数据库的名称,注意: alias-name 需要在db-list中唯一
-    path: ""
-    port: ""
-    config: ""
-    db-name: ""
-    username: ""
-    password: ""
+  - disable: false # 是否禁用
+    type: "mysql" # 数据库的类型,目前支持 mysql、pgsql
+    alias-name: "main" # 数据库的名称,注意: alias-name 需要在db-list中唯一
+    path: "192.168.10.3"
+    port: "3306"
+    config: "charset=utf8mb4&parseTime=True&loc=Local"
+    db-name: "gva"
+    username: "gva"
+    password: "b62nRwqC!zj39188V3gs8YX5RvyH"
     max-idle-conns: 10
     max-open-conns: 100
-    log-mode: ""
+    log-mode: "warn"
     log-zap: false
 
 # local configuration
